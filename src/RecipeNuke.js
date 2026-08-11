@@ -40,7 +40,7 @@ RN.load = function() {
     RN.database.recipes = [];
     RN.database.tags = [];
 
-    const loadedRecipes = import.meta.glob('./recipes/*.json');
+    const loadedRecipes = import.meta.glob('./recipes/*.json', {eager: true});
     console.log("Begin");
     console.log(loadedRecipes);
 
