@@ -1,4 +1,4 @@
-import fs from 'fs';
+const loadedRecipes = import.meta.glob('./recipes/*.json');
 
 const RN = {};
 RN.database = {};
@@ -41,7 +41,23 @@ RN.load = function() {
     RN.database.recipes = [];
     RN.database.tags = [];
 
-    let files = fs.readdirSync('./recipes/');
+    /*const basePath = './recipes';
+
+    for (let fileName of fs.readdirSync(basePath)) {
+        const filePath = path.join(basePath, fileName);
+        const fileContent = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+        console.log(fileName, fileContent);
+    }*/
+
+    for (const path in loadedRecipes) {
+        console.log(`Loaded file: ${path}`);
+        loadedRecipes[path]().then((obj) => {
+            let parsed = JSON.parse(content);
+            console.log(path, parsed)
+        })
+    }
+
+    /*let files = fs.readdirSync('./recipes/');
 
     for (let file in files) {
         console.log(file)
@@ -50,7 +66,7 @@ RN.load = function() {
         let parsed = JSON.parse(content);
         RN.database.recipes.push(parsed);
         // todo tags
-    }
+    }*/
 }
 
 export default RN
