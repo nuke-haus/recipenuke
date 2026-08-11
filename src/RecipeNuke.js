@@ -41,17 +41,15 @@ RN.load = function() {
     RN.database.tags = [];
 
     const loadedRecipes = import.meta.glob('./recipes/*.json', {eager: true});
-    console.log("Begin");
-    console.log(loadedRecipes);
 
-    /*for (const path in loadedRecipes) {
+    for (const path in loadedRecipes) {
         console.log(`Loaded file: ${path}`);
         loadedRecipes[path]().then((obj) => {
             console.log(path, obj);
             let parsed = JSON.parse(content);
             console.log(path, parsed);
         });
-    }*/
+    }
 }
 
 export default RN
