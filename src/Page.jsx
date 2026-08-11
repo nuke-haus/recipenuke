@@ -26,23 +26,9 @@ class Page extends React.Component {
     }
 
     render() {
-
         const header = (
             <div>
-                <div className="navbar">
-                    <div className="topbutton" onClick={() => this._onNavClick(this.NAV_CLOCK)}>
-                        <span className={this._getClassName(this.NAV_CLOCK)}>{this.NAV_CLOCK}</span>
-                    </div>
-                    <div className="topbutton" onClick={() => this._onNavClick(this.NAV_DATABASE)}>
-                        <span className={this._getClassName(this.NAV_DATABASE)}>{this.NAV_DATABASE}</span>
-                    </div>
-                    <div className="topbutton" onClick={() => this._onNavClick(this.NAV_CALENDAR)}>
-                        <span className={this._getClassName(this.NAV_CALENDAR)}>{this.NAV_CALENDAR}</span>
-                    </div>
-                    <div className="topbutton" onClick={() => this._onNavClick(this.NAV_REPORTS)}>
-                        <span className={this._getClassName(this.NAV_REPORTS)}>{this.NAV_REPORTS}</span>
-                    </div>
-                </div>
+                hello
             </div>
         );
 

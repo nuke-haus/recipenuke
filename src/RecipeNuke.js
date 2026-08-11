@@ -1,4 +1,3 @@
-const loadedRecipes = import.meta.glob('./recipes/*.json');
 
 const RN = {};
 RN.database = {};
@@ -41,10 +40,11 @@ RN.load = function() {
     RN.database.recipes = [];
     RN.database.tags = [];
 
+    const loadedRecipes = import.meta.glob('./recipes/*.json');
     console.log("Begin");
-    /*console.log(loadedRecipes);
+    console.log(loadedRecipes);
 
-    for (const path in loadedRecipes) {
+    /*for (const path in loadedRecipes) {
         console.log(`Loaded file: ${path}`);
         loadedRecipes[path]().then((obj) => {
             console.log(path, obj);
