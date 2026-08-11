@@ -41,31 +41,16 @@ RN.load = function() {
     RN.database.recipes = [];
     RN.database.tags = [];
 
-    /*const basePath = './recipes';
-
-    for (let fileName of fs.readdirSync(basePath)) {
-        const filePath = path.join(basePath, fileName);
-        const fileContent = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-        console.log(fileName, fileContent);
-    }*/
+    console.log("Begin");
+    /*console.log(loadedRecipes);
 
     for (const path in loadedRecipes) {
         console.log(`Loaded file: ${path}`);
         loadedRecipes[path]().then((obj) => {
+            console.log(path, obj);
             let parsed = JSON.parse(content);
-            console.log(path, parsed)
-        })
-    }
-
-    /*let files = fs.readdirSync('./recipes/');
-
-    for (let file in files) {
-        console.log(file)
-        let content = fs.readFileSync(file, 'utf-8'); 
-        console.log(content);
-        let parsed = JSON.parse(content);
-        RN.database.recipes.push(parsed);
-        // todo tags
+            console.log(path, parsed);
+        });
     }*/
 }
 
