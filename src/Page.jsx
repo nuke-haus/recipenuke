@@ -84,7 +84,7 @@ class Page extends React.Component {
             ingredients.push(
                 <tr>
                     <th>
-                        NAME
+                        INGREDIENT
                     </th>
                     <th>
                         AMOUNT
@@ -126,8 +126,6 @@ class Page extends React.Component {
                     <span>{this.state.recipe.description}</span>
                     <br/>
                     <br/>
-                    <br/>
-                    <span>INGREDIENTS:</span>
                     <br/>
                     <table className="centertable">
                         <tbody>

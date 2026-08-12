@@ -1,0 +1,20 @@
+{
+    "name": "Buckwheat Banana Porridge",
+    "description": "Porridge with a lot going on.",
+    "tags": ["breakfast", "porridge", "banana", "buckwheat", "peanut butter"],
+    "ingredients": [
+        {"name": "buckwheat", "quantity": "0.5 cup"},
+        {"name": "almond milk", "quantity": "1 cup"},
+        {"name": "banana", "quantity": "1"},
+        {"name": "peanut butter", "quantity": "1 cup"},
+        {"name": "blueberries", "quantity": "0.5 cup"},
+        {"name": "cinnamon", "quantity": "1 tbsp"},
+        {"name": "honey", "quantity": "1 tbsp"}
+    ],
+    "steps": [
+        "put a half cup of water and buckwheat in pot and cook until water is mostly absorbed.",
+        "add the honey, almond milk, sliced banana, cinnamon, and peanut butter.",
+        "stir occasionally for 10 minutes until the liquid is absorbed and the buckwheat is soft but still slightly firm.",
+        "garnish with sprinkle of blueberries."
+    ]
+}
