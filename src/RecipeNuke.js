@@ -85,6 +85,8 @@ RN.load = function() {
 
         console.log(`Loaded recipe at path: ${path}`);
     }
+
+    RN.database.tags.sort();
 }
 
 export default RN

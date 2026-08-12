@@ -1,0 +1,23 @@
+{
+    "name": "Napa Valley Cassoulet",
+    "description": "The standard cassoulet recipe.",
+    "tags": ["dinner", "beans", "pork", "duck", "sausage"],
+    "ingredients": [
+        {"name": "pork butt/leg", "quantity": "1.5 lbs"},
+        {"name": "confit duck leg", "quantity": "5"},
+        {"name": "duck fat", "quantity": "4 tbsp"},
+        {"name": "toulouse sausage", "quantity": "4"},
+        {"name": "tarbais bean", "quantity": "1 lb"},
+        {"name": "carrot", "quantity": "2"},
+        {"name": "celery", "quantity": "2 stalks"},
+        {"name": "garlic", "quantity": "5 cloves"},
+        {"name": "yellow onion", "quantity": "1"},
+        {"name": "shallot", "quantity": "1"},
+        {"name": "thyme", "quantity": "8 sprigs"},
+        {"name": "parsley", "quantity": "3 sprigs"}
+    ],
+    "steps": [
+        "uhh i dunno",
+        "meat"
+    ]
+}

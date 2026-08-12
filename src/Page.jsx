@@ -32,7 +32,12 @@ class Page extends React.Component {
     }
 
     _onClickRecipe(rcp) {
-        this.setState({recipe: rcp});
+        if (this.state.recipe != null && this.state.recipe.name == rcp.name) {
+            this.setState({recipe: null});
+        }
+        else {
+            this.setState({recipe: rcp});
+        }
     }
 
     _onRandomize() {
@@ -52,14 +57,14 @@ class Page extends React.Component {
         this.setState({text: upper, recipe: RN.getRecipe(upper)});
     }
 
-    _renderTable() {
+    _renderRecipeButtons() {
         if (this.state.selectedTags.length > 0) {
             let recipes = RN.getRecipes(this.state.selectedTags);
             let tbl = [];
-            for (let [i, recipe] of recipes) {
+            for (let [i, recipe] of recipes.entries()) {
                 tbl.push(
                     <div className="tagselected" onClick={(event) => this._onClickRecipe(recipe)}>
-                        {tag}
+                        {"🍴 " + recipe.name}
                     </div>
                 );
             }
@@ -72,10 +77,44 @@ class Page extends React.Component {
 
     _renderRecipe() {
         if (this.state.recipe != null) {
+
+            let ingredients = [];
+            let steps = [];
+
+            for (let [i, item] of this.state.recipe.ingredients.entries()) {
+                ingredients.push(
+                    <div>
+                        {item.name + " - " + item.quantity}
+                    </div>
+                );
+            }
+
+            for (let [i, item] of this.state.recipe.steps.entries()) {
+                steps.push(
+                    <div>
+                        {(i + 1) + ". " + item}
+                    </div>
+                );
+            }
+
             return (
                 <>
-                    <div>{this.state.recipe.name}</div>
-                    <div>{this.state.recipe.description}</div>
+                    <span className="recipetitle">{this.state.recipe.name}</span>
+                    <br/>
+                    <br/>
+                    <span>{this.state.recipe.description}</span>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <span>INGREDIENTS:</span>
+                    <br/>
+                    {ingredients}
+                    <br/>
+                    <br/>
+                    <span>STEPS:</span>
+                    <br/>
+                    {steps}
+
                 </>
             );
         }
@@ -122,6 +161,25 @@ class Page extends React.Component {
     }
 
     render() {
+
+        let recipes = null;
+        if (this.state.selectedTags.length > 0) {
+            recipes = (
+                <div className="container">
+                    {this._renderRecipeButtons()}
+                </div>
+            );
+        }
+        
+        let recipe = null;
+        if (this.state.recipe != null) {
+            recipe = (
+                <div className="recipecontainer">
+                    {this._renderRecipe()}
+                </div>
+            );
+        }
+
         return (
             <div>
                 <div className="center">
@@ -130,15 +188,11 @@ class Page extends React.Component {
                 <div className="center">
                     {this._renderTextBox()}
                 </div>
-                <div className="center">
+                <div className="container">
                     {this._renderTags()}
                 </div>
-                <div className="center">
-                    {this._renderTable()}
-                </div>
-                <div className="center">
-                    {this._renderRecipe()}
-                </div>
+                {recipes}
+                {recipe}
             </div>
         );
     }

@@ -138,13 +138,18 @@ table, td, th {
     margin-left: -4px;
 }
 
-.center {
+.recipecontainer {
   text-align: center;
-  margin: auto;
+  margin: 10px;
+  padding: 6px;
+  background-color: #53685d;
+}
+
+.recipetitle {
+  font-size: 24px;
 }
 
 .tag {
-  float: left;
   margin: 6px;
   padding: 8px;
   cursor: pointer;
@@ -157,7 +162,6 @@ table, td, th {
 }
 
 .tagselected {
-  float: left;
   margin: 6px;
   padding: 8px;
   cursor: pointer;
@@ -166,7 +170,31 @@ table, td, th {
   border-color: #000000;
   border-style: outset;
   text-align: center;
-  background: #11c36a;
+  background: #2b7a52;
+}
+
+.recipebutton {
+  margin: 6px;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  border-width: 2px;
+  border-color: #000000;
+  border-style: outset;
+  text-align: center;
+  background: #2b7a52;
+}
+
+.center {
+  text-align: center;
+  margin: auto;
+}
+
+.container {
+  display: flex;
+  margin: 10px;
+  padding: 6px;
+  background-color: #53685d;
 }
 
 .modal {
