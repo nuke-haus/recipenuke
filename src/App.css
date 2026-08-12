@@ -110,10 +110,20 @@ select {
     width: 200px;
 }
 
-table, td, th {
-    border: 3px solid black;
+table, td {
+    padding-left: 3px;
+    padding-right: 3px;
+    border: 2px solid black;
     border-collapse: collapse;
     background-color: #7ea893;
+}
+
+th {
+    padding-left: 3px;
+    padding-right: 3px;
+    border: 2px solid black;
+    border-collapse: collapse;
+    background-color: #668776;
 }
 
 .recipecontainer {

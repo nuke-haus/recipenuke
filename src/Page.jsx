@@ -81,11 +81,25 @@ class Page extends React.Component {
             let ingredients = [];
             let steps = [];
 
+            ingredients.push(
+                <tr>
+                    <th>
+                        NAME
+                    </th>
+                    <th>
+                        AMOUNT
+                    </th>
+                </tr>
+            );
+
             for (let [i, item] of this.state.recipe.ingredients.entries()) {
                 ingredients.push(
                     <tr>
                         <td>
-                            {item.name + " - " + item.quantity}
+                            {item.name}
+                        </td>
+                        <td>
+                            {item.quantity}
                         </td>
                     </tr>
                 );
@@ -95,7 +109,10 @@ class Page extends React.Component {
                 steps.push(
                     <tr>
                         <td>
-                            {(i + 1) + ". " + item}
+                            {(i + 1) + "."}
+                        </td>
+                        <td>
+                            {item}
                         </td>
                     </tr>
                 );
