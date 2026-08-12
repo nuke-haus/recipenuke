@@ -64,7 +64,7 @@ class Page extends React.Component {
             for (let [i, recipe] of recipes.entries()) {
                 tbl.push(
                     <div className="tagselected" onClick={(event) => this._onClickRecipe(recipe)}>
-                        {"🍴 " + recipe.name}
+                        {"🍽️ " + recipe.name}
                     </div>
                 );
             }
