@@ -122,7 +122,7 @@ th {
     background-color: #668776;
 }
 
-tbody tr:nth-child(odd) {
+.steps tr:nth-child(odd) {
   background-color: #668776;
 }
 

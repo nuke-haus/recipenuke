@@ -137,7 +137,7 @@ class Page extends React.Component {
                     <span>STEPS:</span>
                     <br/>
                     <table className="centertable">
-                        <tbody>
+                        <tbody className="steps">
                             {steps}
                         </tbody>
                     </table>
