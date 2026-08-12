@@ -192,6 +192,7 @@ table, td, th {
 
 .container {
   display: flex;
+  flex-wrap: wrap;
   margin: 10px;
   padding: 6px;
   background-color: #53685d;
