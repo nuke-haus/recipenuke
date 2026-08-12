@@ -116,28 +116,6 @@ table, td, th {
     background-color: #7ea893;
 }
 
-[data-tooltip]:before {
-    content: attr(data-tooltip);
-    position: absolute;
-    display: none;
-    opacity: 0;
-    
-    transition: all 0.15s ease 0.3s;
-}
-
-[data-tooltip]:hover:before {
-    display: inline-block;
-    opacity: 1;
-    
-    animation: fadeIn 0.3s;
-    padding: 8px;
-    color: #c3ebc3;
-    background: #3b4942;
-    border-radius: 4px;
-    margin-top: -36px;
-    margin-left: -4px;
-}
-
 .recipecontainer {
   text-align: center;
   margin: 10px;
