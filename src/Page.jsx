@@ -176,14 +176,22 @@ class Page extends React.Component {
 
     _renderTags() {
         let tags = [];
+        let firstTags = ["BREAKFAST", "LUNCH", "DINNER"];
+        for (let [i, tag] of firstTags.entries()) {
+            tags.push(
+                <div className={this._getClass(tag)} onClick={(event) => this._onClickTag(tag)}>
+                    {"🧑‍🍳 " + tag}
+                </div>
+            );
+        }
+
         for (let [i, tag] of RN.database.tags.entries()) {
-            let displayName = "🧺 " + tag;
             if (tag == "DINNER" || tag == "LUNCH" || tag == "BREAKFAST") {
-                displayName = "🧑‍🍳 " + tag;
+                continue;
             }
             tags.push(
                 <div className={this._getClass(tag)} onClick={(event) => this._onClickTag(tag)}>
-                    {displayName}
+                    {"🧺 " + tag}
                 </div>
             );
         }
