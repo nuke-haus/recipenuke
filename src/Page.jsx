@@ -22,12 +22,12 @@ class Page extends React.Component {
             let idx = this.state.selectedTags.indexOf(tag);
             let tags = this.state.selectedTags;
             tags.splice(idx, 1);
-            this.setState({selectedTags: tags});
+            this.setState({selectedTags: tags, recipe: null});
         }
         else {
             let arr = this.state.selectedTags;
             arr.push(tag);
-            this.setState({selectedTags: arr});
+            this.setState({selectedTags: arr, recipe: null});
         }
     }
 
@@ -43,8 +43,13 @@ class Page extends React.Component {
     _onRandomize() {
         if (this.state.selectedTags.length > 0) {
             let recipes = RN.getRecipes(this.state.selectedTags);
-            let rcp = RN.rand(recipes);
-            this.setState({recipe: rcp});
+            if (recipes.length == 0) {
+                alert("No recipes found with selected tags!");
+            }
+            else {
+                let rcp = RN.rand(recipes);
+                this.setState({recipe: rcp});
+            }
         }
         else {
             let rcp = RN.rand(RN.database.recipes);
