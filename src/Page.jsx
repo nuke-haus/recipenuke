@@ -202,11 +202,14 @@ class Page extends React.Component {
 
         let recipes = null;
         if (this.state.selectedTags.length > 0) {
-            recipes = (
-                <div className="container">
-                    {this._renderRecipeButtons()}
-                </div>
-            );
+            let recipes = RN.getRecipes(this.state.selectedTags);
+            if (recipes.length > 0) {
+                recipes = (
+                    <div className="container">
+                        {this._renderRecipeButtons()}
+                    </div>
+                );
+            }
         }
         
         let recipe = null;
