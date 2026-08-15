@@ -73,7 +73,11 @@ class Page extends React.Component {
                     </div>
                 );
             }
-            return tbl;
+            return (
+                <div className="container">
+                    {tbl}
+                </div>
+            );
         }
         else {
             return null;
@@ -124,7 +128,7 @@ class Page extends React.Component {
             }
 
             return (
-                <>
+                <div className="recipecontainer">
                     <span className="recipetitle">{this.state.recipe.name}</span>
                     <br/>
                     <br/>
@@ -146,7 +150,7 @@ class Page extends React.Component {
                             {steps}
                         </tbody>
                     </table>
-                </>
+                </div>
             );
         }
         else {
@@ -205,27 +209,6 @@ class Page extends React.Component {
 
     render() {
 
-        let recipes = null;
-        if (this.state.selectedTags.length > 0) {
-            let recipes = RN.getRecipes(this.state.selectedTags);
-            if (recipes.length > 0) {
-                recipes = (
-                    <div className="container">
-                        {this._renderRecipeButtons()}
-                    </div>
-                );
-            }
-        }
-        
-        let recipe = null;
-        if (this.state.recipe != null) {
-            recipe = (
-                <div className="recipecontainer">
-                    {this._renderRecipe()}
-                </div>
-            );
-        }
-
         return (
             <div>
                 <div className="center">
@@ -237,8 +220,8 @@ class Page extends React.Component {
                 <div className="container">
                     {this._renderTags()}
                 </div>
-                {recipes}
-                {recipe}
+                {this._renderRecipeButtons()}
+                {this._renderRecipe()}
             </div>
         );
     }

@@ -122,6 +122,10 @@ th {
     background-color: #668776;
 }
 
+tr:nth-child(odd) {
+  background-color: #94c7ae;
+}
+
 .steps tr:nth-child(odd) {
   background-color: #668776;
 }
