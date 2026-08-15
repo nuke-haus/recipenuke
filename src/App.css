@@ -110,12 +110,19 @@ select {
     width: 200px;
 }
 
-table, td {
+table {
     padding-left: 3px;
     padding-right: 3px;
     border: 2px solid black;
     border-collapse: collapse;
     background-color: #7ea893;
+}
+
+td {
+    padding-left: 3px;
+    padding-right: 3px;
+    border: 2px solid black;
+    border-collapse: collapse;
 }
 
 th {
