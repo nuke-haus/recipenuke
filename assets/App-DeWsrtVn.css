@@ -135,6 +135,7 @@ th {
 
 tr:nth-child(odd) {
   background-color: #94c7ae;
+  padding-bottom: 10px;
 }
 
 .recipecontainer {
