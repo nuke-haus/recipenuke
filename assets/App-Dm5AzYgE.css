@@ -1,7 +1,7 @@
 
 body {
     font-size: 20px;
-  	font-family: 'Azeret Mono', sans-serif;
+  	font-family: 'Barlow Semi Condensed', sans-serif;
 	
     color: #000000;
     background-color: #6f8c7d;
@@ -9,7 +9,7 @@ body {
     height: 100vh;
     margin: 0;
 	
-	  -webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
 }
 
 a:link {
@@ -135,7 +135,6 @@ th {
 
 tr:nth-child(odd) {
   background-color: #94c7ae;
-  padding-bottom: 10px;
 }
 
 .recipecontainer {
